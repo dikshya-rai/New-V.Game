@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="hero">
+		<nav>
+			<a href="https://www.playstation.com/en-us/ps5/" target="_blank">
+				<img src="image/logo.png" class="logo">
+			</a>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="feature.html">Features</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+			<div> 
+				<a href="buy.html" class="btn">Buy Now</a>
+			</div>
+		</nav>
+		<div class="section">
+			<div class="container">
+				<div class="content-section">
+					<div class="title anim">
+						<h1>About Us</h1>
+					</div>
+					<div class="contentabout anim">
+						<h3>How PS5 came to be</h3>
+						<p>The PlayStation 5 (PS5) is a home video game console developed by Sony Interactive Entertainment. Announced in 2019 as the successor to the PlayStation 4, the PS5 was released on November 12, 2020, in Australia, Japan, New Zealand, North America, and South Korea, with worldwide release following a week later. The PS5 is part of the ninth generation of video game consoles, along with Microsoft's Xbox Series X and Series S consoles, which were released in the same month.</p>
+						<div class="button">
+							<a href="https://en.wikipedia.org/wiki/PlayStation_5" target="_blank">Read More</a>
+						</div>	
+					</div>
+				</div>
+				<div class="image-section anim">
+					<img class="mySlides" src="image/aboutss.jpg">
+					<img class="mySlides" src="image/abouts.png">
+					<img class="mySlides" src="image/abouts.jpg">
+					<img class="mySlides" src="image/about.jpg">
+					<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+					<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<footer class="footer">
+                    <div class="footer-content">
+                      <p class="caption">
+                        Change the Game
+                        <br>
+                        Available at SONY stores near you
+                        <br>
+                        Dikshya Rai
+                    </div>
+    </footer>
+<script type="text/javascript">
+	var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 4000); 
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
